@@ -218,6 +218,12 @@
             <version>1.2.7</version>
             <optional>true</optional>
         </dependency>
+        <!-- overrides docker-java dependency in build-info-extractor-docker to remove jersey dependencies -->
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>docker-java-api</artifactId>
+            <version>3.1.5.2</version>
+        </dependency>
         <dependency>
             <groupId>org.jfrog.buildinfo</groupId>
             <artifactId>build-info-api</artifactId>
@@ -449,17 +455,6 @@
             <artifactId>plexus-classworlds</artifactId>
             <version>2.5.2</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.docker-java</groupId>
-            <artifactId>docker-java</artifactId>
-            <version>3.2.5</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>jcl-over-slf4j</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
